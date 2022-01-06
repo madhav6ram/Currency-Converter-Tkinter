@@ -4,7 +4,7 @@ import requests
 
 
 def money_conv(m, from_curr, to_curr):
-    api_url = r"http://api.exchangeratesapi.io/v1/latest?access_key=c45f716cf519784b160f1ca3b7144073"
+    api_url = r"http://api.exchangeratesapi.io/v1/latest?access_key="
     result = requests.get(api_url).json()
     #print(result)
     new_m = m / (float(result["rates"][from_curr]))
